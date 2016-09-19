@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your measurement" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MYI-VF-iId">
+                                <rect key="frame" x="0.0" y="121" width="248" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="in meter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0UL-Ow-kRB">
+                                <rect key="frame" x="256" y="124" width="64" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="64" id="T9f-Nj-94u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Update for answer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMq-6c-7dM">
+                                <rect key="frame" x="0.0" y="299" width="320" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="NLt-Rw-1Eh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="04x-WZ-FQL">
+                                <rect key="frame" x="0.0" y="191" width="320" height="29"/>
+                                <segments>
+                                    <segment title="centimeter"/>
+                                    <segment title="kilometer"/>
+                                    <segment title="millimeter"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vY-Qg-O7H">
+                                <rect key="frame" x="101" y="254" width="118" height="30"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ho-15-NJG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0UL-Ow-kRB" firstAttribute="trailing" secondItem="04x-WZ-FQL" secondAttribute="trailing" id="3UM-1D-Y8b"/>
+                            <constraint firstItem="bMq-6c-7dM" firstAttribute="leading" secondItem="04x-WZ-FQL" secondAttribute="leading" id="4Zr-0v-AAT"/>
+                            <constraint firstItem="04x-WZ-FQL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4eu-IC-fb1"/>
+                            <constraint firstItem="7vY-Qg-O7H" firstAttribute="top" secondItem="04x-WZ-FQL" secondAttribute="bottom" constant="35" id="Mh5-li-2SZ"/>
+                            <constraint firstItem="bMq-6c-7dM" firstAttribute="centerX" secondItem="7vY-Qg-O7H" secondAttribute="centerX" id="NMz-Kg-t9Q"/>
+                            <constraint firstItem="0UL-Ow-kRB" firstAttribute="leading" secondItem="MYI-VF-iId" secondAttribute="trailing" constant="8" id="NNk-XD-uFl"/>
+                            <constraint firstItem="7vY-Qg-O7H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="85" id="QoJ-AI-8K9"/>
+                            <constraint firstItem="0UL-Ow-kRB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="104" id="XkM-FO-BvP"/>
+                            <constraint firstItem="04x-WZ-FQL" firstAttribute="top" secondItem="MYI-VF-iId" secondAttribute="bottom" constant="40" id="aLB-DT-oaL"/>
+                            <constraint firstItem="bMq-6c-7dM" firstAttribute="trailing" secondItem="04x-WZ-FQL" secondAttribute="trailing" id="g2C-gu-hV6"/>
+                            <constraint firstItem="MYI-VF-iId" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="l7M-Uz-u5j"/>
+                            <constraint firstItem="bMq-6c-7dM" firstAttribute="top" secondItem="7vY-Qg-O7H" secondAttribute="bottom" constant="15" id="m9W-U7-NxM"/>
+                            <constraint firstItem="MYI-VF-iId" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="101" id="nAY-Ag-tPl"/>
+                            <constraint firstItem="04x-WZ-FQL" firstAttribute="top" secondItem="0UL-Ow-kRB" secondAttribute="bottom" constant="46" id="tWj-bX-479"/>
+                            <constraint firstItem="MYI-VF-iId" firstAttribute="leading" secondItem="04x-WZ-FQL" secondAttribute="leading" id="y35-cZ-4qT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputField" destination="MYI-VF-iId" id="bId-to-W4D"/>
+                        <outlet property="outputField" destination="bMq-6c-7dM" id="Q22-EH-0Rw"/>
+                        <outlet property="segmentController" destination="04x-WZ-FQL" id="Ohf-ka-K8l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="341"/>
+        </scene>
+    </scenes>
+</document>
